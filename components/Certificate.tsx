@@ -68,7 +68,7 @@ export function Certificate({ userName, company, date, courseName, responsive = 
         {/* Certificate Content */}
         <div className={`${spacingClasses} text-center px-4`}>
           <p className={certifyTextClasses}>
-            La société Sogea Satom Madagascar Certifie que
+            La société Sogea Satom Cameroun Certifie que
           </p>
           <p className={nameTextClasses}>
             {userName.toUpperCase()} de la société {company.toUpperCase()}

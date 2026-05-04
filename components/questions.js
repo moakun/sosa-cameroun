@@ -24,9 +24,9 @@ const questions = [
   },
   {
     question:
-      "Selon l'indice de perception de la corruption de TRANSPARENCYINTERNATIONAL Madagascar est:",
+      "Selon l'indice de perception de la corruption de TRANSPARENCYINTERNATIONAL Cameroun est:",
     answerOptions: [
-      { answer: "140 ème sur 180 pays à l'échelle mondial.", isCorrect: true },
+      { answer: "142 ème sur 180 pays à l'échelle mondial.", isCorrect: true },
       { answer: '1 er en Afrique.' },
       {
         answer:
@@ -37,7 +37,7 @@ const questions = [
   },
   {
     question:
-      "le code pénal de Madagascar distingue entre la corruption passive et la corruption active:",
+      "le code pénal de Cameroun distingue entre la corruption passive et la corruption active:",
     answerOptions: [{ answer: 'VRAI', isCorrect: true }, { answer: 'FAUX' }],
   },
   {
@@ -61,12 +61,12 @@ const questions = [
     ],
   },
   {
-    question: "Sogea Satom Madagascar a interdit les cadeaux en espèce:",
+    question: "Sogea Satom Cameroun a interdit les cadeaux en espèce:",
     answerOptions: [{ answer: 'VRAI', isCorrect: true }, { answer: 'FAUX' }],
   },
   {
     question:
-      "Sogea Satom Madagascar a mis à la disposition de son personnel et de ses partenaires commerciaux un dispositif d'alertes pour signaler toutes les inquiétudes en relation avec la corruption:",
+      "Sogea Satom Cameroun a mis à la disposition de son personnel et de ses partenaires commerciaux un dispositif d'alertes pour signaler toutes les inquiétudes en relation avec la corruption:",
     answerOptions: [{ answer: 'VRAI', isCorrect: true }, { answer: 'FAUX' }],
   },
   {
