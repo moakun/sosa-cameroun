@@ -1,4 +1,5 @@
 import { formatDate } from '@/utils/format-date';
+import Image from "next/image";
 
 interface CertificateProps {
   userName: string;
@@ -81,14 +82,35 @@ export function Certificate({ userName, company, date, courseName, responsive = 
           </h1>
         </div>
 
-        {/* Date */}
-        <div className={`text-left w-full ${datePaddingClasses}`}>
-          <p className={dateTextClasses}>
-            <span className="font-semibold">Date : </span>
-            {formatDate(date)}
-          </p>
-        </div>
-      </div>
-    </div>
+{/* Date + Signature */}
+<div className={`flex items-end justify-between w-full ${datePaddingClasses} pr-12`}>
+  <p className={dateTextClasses}>
+    <span className="font-semibold">Date : </span>
+    {formatDate(date)}
+  </p>
+
+  <div className="flex flex-col items-center gap-1 overflow-hidden">
+    <img
+      src="/assets/bossName.png"
+      alt="Boss Name"
+      className="object-contain"
+      style={responsive
+        ? { maxWidth: "80px", maxHeight: "28px" }
+        : { maxWidth: "120px", maxHeight: "40px" }
+      }
+    />
+    <img
+      src="/assets/bossSign.png"
+      alt="Boss Signature"
+      className="object-contain"
+      style={responsive
+        ? { maxWidth: "80px", maxHeight: "40px" }
+        : { maxWidth: "120px", maxHeight: "60px" }
+      }
+    />
+  </div>
+</div>
+</div>
+</div>
   );
 }
