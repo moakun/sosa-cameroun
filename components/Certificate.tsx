@@ -1,5 +1,4 @@
 import { formatDate } from '@/utils/format-date';
-import Image from "next/image";
 
 interface CertificateProps {
   userName: string;
@@ -66,21 +65,21 @@ export function Certificate({ userName, company, date, courseName, responsive = 
           />
         </div>
 
-        {/* Certificate Content */}
-        <div className={`${spacingClasses} text-center px-4`}>
-          <p className={certifyTextClasses}>
-            La société Sogea Satom Cameroun Certifie que
-          </p>
-          <p className={nameTextClasses}>
-            {userName.toUpperCase()} de la société {company.toUpperCase()}
-          </p>
-          <p className={completedTextClasses}>
-            a réussi à compléter le programme de formation suivant :
-          </p>
-          <h1 className={courseNameClasses}>
-            {courseName}
-          </h1>
-        </div>
+       {/* Certificate Content */}
+<div className={`${spacingClasses} text-center px-4`} style={{ wordSpacing: '0.25em' }}>
+  <p className={certifyTextClasses}>
+    La société Sogea Satom Cameroun Certifie que
+  </p>
+  <p className={nameTextClasses}>
+    {userName.toUpperCase()} de la société {company.toUpperCase()}
+  </p>
+  <p className={completedTextClasses}>
+    a réussi à compléter le programme de formation suivant :
+  </p>
+  <h1 className={courseNameClasses}>
+    {courseName}
+  </h1>
+</div>
 
 {/* Date + Signature */}
 <div className={`flex items-end justify-between w-full ${datePaddingClasses} pr-12`}>
@@ -89,26 +88,21 @@ export function Certificate({ userName, company, date, courseName, responsive = 
     {formatDate(date)}
   </p>
 
-  <div className="flex flex-col items-center gap-1 overflow-hidden">
-    <img
-      src="/assets/bossName.png"
-      alt="Boss Name"
-      className="object-contain"
-      style={responsive
-        ? { maxWidth: "80px", maxHeight: "28px" }
-        : { maxWidth: "120px", maxHeight: "40px" }
-      }
-    />
-    <img
-      src="/assets/bossSign.png"
-      alt="Boss Signature"
-      className="object-contain"
-      style={responsive
-        ? { maxWidth: "80px", maxHeight: "40px" }
-        : { maxWidth: "120px", maxHeight: "60px" }
-      }
-    />
+  <div className="flex flex-col items-center gap-1 overflow-hidden pt-3">
+  <div className={`text-center font-semibold leading-tight ${responsive ? "text-[10px]" : "text-sm"}`}>
+    <p>NDJENTO PEBOURA Fadimatou</p>
+    <p className="font-normal text-muted-foreground">Responsable HSE / Conformité</p>
   </div>
+  <img
+    src="/assets/bossSign.png"
+    alt="Boss Signature"
+    className="object-contain"
+    style={responsive
+      ? { maxWidth: "80px", maxHeight: "40px" }
+      : { maxWidth: "120px", maxHeight: "60px" }
+    }
+  />
+</div>
 </div>
 </div>
 </div>
